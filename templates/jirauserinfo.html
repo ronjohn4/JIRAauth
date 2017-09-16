@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}JIRA User Info{% endblock %}
+{% block body %}
+    # sample route showing how to use JiraSession to make additional calls to JIRA<br>
+    # JIRA documentation for this API is here:<br>
+    #     https://docs.atlassian.com/jira/REST/cloud/#api/2/myself-getUser
+    <hr>
+    <h2>Unformatted</h2>
+    {{response}}
+    <hr>
+    <h2>Formatted</h2>
+    <b>self:</b> <a href={{formatted['self']}} target="_blank">{{formatted['self']}}</a><br>
+    <b>key:</b>{{formatted['key']}}<br>
+    <b>name:</b> {{formatted['name']}}<br>
+    <b>displayName:</b> {{formatted['displayName']}}<br>
+    <b>active:</b> {{formatted['active']}}<br>
+    <b>timeZone:</b> {{formatted['timeZone']}}<br>
+{% endblock %}
