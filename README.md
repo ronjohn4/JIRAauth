@@ -1,5 +1,5 @@
-#JIRA Auth
-####Python/Flask webapp authenticating against JIRA
+# JIRA Auth
+#### Python/Flask webapp authenticating against JIRA
 
 JIRA Auth is a sample project using Flask and requests to authenticate and pull data from JIRA.  This project does not use Flask-Login or JIRA packages.
 
