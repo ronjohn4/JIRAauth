@@ -6,9 +6,10 @@ from functools import wraps
 import requests
 from JIRAhandler import JIRAhandler
 
+JIRA_BASE_URL = 'https://CHANGETOYOURINSTANCE.atlassian.net'
+
 app = Flask('JIRAauth')
-JiraSession = requests.session()  #NOT a Flask session
-JiraHandle = JIRAhandler(JiraSession, 'https://levelsbeyond.atlassian.net')
+JiraHandle = JIRAhandler(JIRA_BASE_URL)
 
 # secret_key is used for flash messages
 app.config.update(dict(
