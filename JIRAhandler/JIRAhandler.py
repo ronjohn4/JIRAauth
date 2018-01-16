@@ -1,11 +1,12 @@
 from flask import json
+import requests
 
 class JIRAhandler():
     _JiraSession = None
     _JiraBaseUrl = None
 
-    def __init__(self, js, JiraBaseUrl):
-        self._JiraSession = js
+    def __init__(self, JiraBaseUrl):
+        self._JiraSession =  requests.session()  # NOT a Flask session
         self._JiraBaseUrl = JiraBaseUrl
         self._JiraSession.auth = None
 

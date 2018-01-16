@@ -1,6 +1,7 @@
 from JIRAhandler import JIRAhandler
+import json
 
-class JIRAhandlerauth(JIRAhandler):
+class JIRAhandlerauth(JIRAhandler.JIRAhandler):
     """JIRAhandlerauth returns simple user information from JIRA.
 
     JIRAhandlerauth subclasses JIRAhandler that manages JIRA authentication and session.

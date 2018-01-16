@@ -3,13 +3,13 @@
 
 from flask import Flask, render_template, request, redirect, url_for, session
 from functools import wraps
-import requests
-from JIRAhandler import JIRAhandler
+import JIRAhandlerauth
 
-JIRA_BASE_URL = 'https://CHANGETOYOURINSTANCE.atlassian.net'
+
+JIRA_BASE_URL = 'https://ronjohn.atlassian.net'
 
 app = Flask('JIRAauth')
-JiraHandle = JIRAhandler(JIRA_BASE_URL)
+JiraHandle = JIRAhandlerauth.JIRAhandlerauth(JIRA_BASE_URL)
 
 # secret_key is used for flash messages
 app.config.update(dict(
