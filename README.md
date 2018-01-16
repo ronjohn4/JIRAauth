@@ -25,7 +25,7 @@ The goal is to be as simple and clear as possible.
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 ### Prerequisites
-You need Python 3.4 or later to run JIRAInvoice and the latest version of virtualenv to create the runtime environment.  
+You need Python 3.4 or later and the latest version of virtualenv to create the runtime environment.  
 
 ```
 $ sudo apt-get install python3 python3-pip
@@ -41,13 +41,13 @@ The steps below will clone a copy of the code to your local machine, create a vi
 $ git clone https://github.com/ronjohn4/JIRAauth  
 $ virtualenv JIRAauth --python=python3
 $ cd JIRAauth
-$ source ./bin/activate
+$ source ./bin/activate ('scripts\activate' on Windows)
 (JIRAauth)$ python setup.py install
 ```
 
 ### Running
 
-The command below will start up JIRAauth in your default webserver on port 5002 (this can be changed in the code).
+The command below will start the app in your default webserver on port 5003 (this can be changed in the code).
 
 ```
 $ python JIRAauth.py
